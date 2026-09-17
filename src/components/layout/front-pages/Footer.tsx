@@ -103,7 +103,12 @@ const Footer = () => {
                 Products
               </Typography>
               <div className='flex flex-col gap-4'>
-                <Typography component={Link} href='https://mui.com/store/contributors/themeselection' color='white' className='opacity-[0.78]'>
+                <Typography
+                  component={Link}
+                  href='https://www.filter-go.com/'
+                  color='white'
+                  className='opacity-[0.78]'
+                >
                   Page builder
                 </Typography>
                 <Typography
@@ -122,7 +127,12 @@ const Footer = () => {
                 >
                   UI Kits
                 </Typography>
-                <Typography component={Link} href='https://mui.com/store/contributors/themeselection' color='white' className='opacity-[0.78]'>
+                <Typography
+                  component={Link}
+                  href='https://www.filter-go.com/'
+                  color='white'
+                  className='opacity-[0.78]'
+                >
                   Illustrations
                 </Typography>
               </div>
@@ -180,12 +190,14 @@ const Footer = () => {
         >
           <Typography className='text-[#D3D4DC]'>
             <span>{`© ${new Date().getFullYear()} `}</span>
-            <Link href='https://mui.com/store/contributors/themeselection' target='_blank' className='font-medium text-white'>
-              ThemeSelection
+            <Link
+              href='https://www.filter-go.com/'
+              target='_blank'
+              className='font-medium text-white'
+            >
+              FilterGO
             </Link>
-            <span>{`, Made with `}</span>
-            <span>{`❤️`}</span>
-            <span>{` for a better web.`}</span>
+            <span>{` · Fresh Air Delivered`}</span>
           </Typography>
           <div className='flex gap-1.5 items-center opacity-[0.92]'>
             <IconButton component={Link} size='small' href='https://github.com/themeselection' target='_blank'>

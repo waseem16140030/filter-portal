@@ -20,30 +20,19 @@ const FooterContent = () => {
     <div
       className={classnames(verticalLayoutClasses.footerContent, 'flex items-center justify-between flex-wrap gap-4')}
     >
-      <p>
-        <span className='text-textSecondary'>{`© ${new Date().getFullYear()}, Made with `}</span>
-        <span>{`❤️`}</span>
-        <span className='text-textSecondary'>{` by `}</span>
-        <Link href='https://mui.com/store/contributors/themeselection' target='_blank' className='text-primary'>
-          ThemeSelection
-        </Link>
-      </p>
+      <p className='text-textSecondary'>{`© ${new Date().getFullYear()} FilterGO · Fresh Air Delivered`}</p>
       {!isBreakpointReached && (
         <div className='flex items-center gap-4'>
-          <Link href='https://mui.com/store/license' target='_blank' className='text-primary'>
-            License
+          <Link href='https://www.filter-go.com/schedule-appointment/' target='_blank' className='text-primary'>
+            Book a Visit
           </Link>
-          <Link href='https://mui.com/store/contributors/themeselection' target='_blank' className='text-primary'>
-            More Themes
+          <Link href='https://www.filter-go.com/faqs/' target='_blank' className='text-primary'>
+            FAQs
           </Link>
-          <Link
-            href='https://demos.themeselection.com/marketplace/sneat-mui-nextjs-admin-template/documentation'
-            target='_blank'
-            className='text-primary'
-          >
-            Documentation
+          <Link href='https://www.filter-go.com/franchise-opportunity/' target='_blank' className='text-primary'>
+            Franchise
           </Link>
-          <Link href='https://themeselection.com/support' target='_blank' className='text-primary'>
+          <Link href='https://www.filter-go.com/contact/' target='_blank' className='text-primary'>
             Support
           </Link>
         </div>

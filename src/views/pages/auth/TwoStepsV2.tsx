@@ -3,9 +3,6 @@
 // React Imports
 import { useState } from 'react'
 
-// Next Imports
-import { useParams } from 'next/navigation'
-
 // MUI Imports
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
@@ -16,9 +13,6 @@ import { OTPInput } from 'input-otp'
 import type { SlotProps } from 'input-otp'
 import classnames from 'classnames'
 
-// Type Imports
-import type { Locale } from '@configs/i18n'
-
 // Component Imports
 import Form from '@components/Form'
 import Link from '@components/Link'
@@ -26,9 +20,6 @@ import Logo from '@components/layout/shared/Logo'
 
 // Hook Imports
 import { useSettings } from '@core/hooks/useSettings'
-
-// Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Style Imports
 import styles from '@/libs/styles/inputOtp.module.css'
@@ -70,7 +61,7 @@ const TwoStepsV2 = () => {
   const [otp, setOtp] = useState<string | null>(null)
 
   // Hooks
-  const { lang: locale } = useParams()
+
   const { settings } = useSettings()
   const theme = useTheme()
 
@@ -91,10 +82,7 @@ const TwoStepsV2 = () => {
         />
       </div>
       <div className='flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]'>
-        <Link
-          href={getLocalizedUrl('/', locale as Locale)}
-          className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'
-        >
+        <Link href={'/'} className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'>
           <Logo />
         </Link>
         <div className='flex flex-col gap-6 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset] mbs-11 sm:mbs-14 md:mbs-0'>

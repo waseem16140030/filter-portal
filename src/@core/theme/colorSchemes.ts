@@ -9,9 +9,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
     light: {
       palette: {
         primary: {
-          main: '#696CFF',
-          light: '#8789FF',
-          dark: '#5E61E6',
+          main: '#2DA551',
+          light: '#57B774',
+          dark: '#299549',
           lighterOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)',
           mainOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.24)',
@@ -19,9 +19,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.38)'
         },
         secondary: {
-          main: '#8592A3',
-          light: '#9DA8B5',
-          dark: '#788393',
+          main: '#7A8A7C',
+          light: '#95A196',
+          dark: '#6E7C70',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.16)',
@@ -30,9 +30,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.38)'
         },
         error: {
-          main: '#FF3E1D',
-          light: '#FF654A',
-          dark: '#E6381A',
+          main: '#EB3D63',
+          light: '#EF6482',
+          dark: '#D43759',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.16)',
@@ -41,9 +41,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.38)'
         },
         warning: {
-          main: '#FFAB00',
-          light: '#FFBC33',
-          dark: '#E69A00',
+          main: '#FFAB1D',
+          light: '#FFBC4A',
+          dark: '#E69A1A',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.16)',
@@ -52,9 +52,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.38)'
         },
         info: {
-          main: '#03C3EC',
-          light: '#35CFF0',
-          dark: '#03AFD4',
+          main: '#2092EC',
+          light: '#4DA8F0',
+          dark: '#1D83D4',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.16)',
@@ -63,9 +63,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.38)'
         },
         success: {
-          main: '#71DD37',
-          light: '#8DE45F',
-          dark: '#66C732',
+          main: '#10B981',
+          light: '#40C79A',
+          dark: '#0EA774',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.16)',
@@ -83,7 +83,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
         divider: `rgb(var(--mui-mainColorChannels-light) / 0.12)`,
         dividerChannel: 'var(--mui-mainColorChannels-light)',
         background: {
-          default: skin === 'bordered' ? '#FFFFFF' : '#F5F5F9',
+          default: skin === 'bordered' ? '#FFFFFF' : '#F7F7F7',
           paper: '#FFFFFF',
           paperChannel: '255 255 255'
         },
@@ -117,7 +117,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           successFilledBg: 'var(--mui-palette-success-main)'
         },
         Avatar: {
-          defaultBg: '#EEEDF0'
+          defaultBg: '#EEEFEE'
         },
         Chip: {
           defaultBorder: 'var(--mui-palette-divider)'
@@ -128,7 +128,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           disabledBg: 'var(--mui-palette-action-hover)'
         },
         SnackbarContent: {
-          bg: '#22303E',
+          bg: '#323631',
           color: 'var(--mui-palette-background-paper)'
         },
         Switch: {
@@ -142,28 +142,28 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           successDisabledColor: 'var(--mui-palette-common-white)'
         },
         Tooltip: {
-          bg: '#22303E'
+          bg: '#323631'
         },
         TableCell: {
           border: 'var(--mui-palette-divider)'
         },
         customColors: {
-          bodyBg: '#F5F5F9',
-          chatBg: '#F7F8F8',
+          bodyBg: '#F7F7F7',
+          chatBg: '#F6F7F5',
           greyLightBg: '#FAFAFA',
           inputBorder: `rgb(var(--mui-mainColorChannels-light) / 0.22)`,
           tableHeaderBg: '#FFFFFF',
           tooltipText: '#FFFFFF',
-          trackBg: '#EEF1F3'
+          trackBg: '#F0F1F0'
         }
       }
     },
     dark: {
       palette: {
         primary: {
-          main: '#696CFF',
-          light: '#8789FF',
-          dark: '#5E61E6',
+          main: '#2DA551',
+          light: '#57B774',
+          dark: '#299549',
           lighterOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)',
           mainOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.24)',
@@ -171,9 +171,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-primary-mainChannel) / 0.38)'
         },
         secondary: {
-          main: '#8592A3',
-          light: '#9DA8B5',
-          dark: '#788393',
+          main: '#7A8A7C',
+          light: '#95A196',
+          dark: '#6E7C70',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.16)',
@@ -182,9 +182,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-secondary-mainChannel) / 0.38)'
         },
         error: {
-          main: '#FF3E1D',
-          light: '#FF654A',
-          dark: '#E6381A',
+          main: '#EB3D63',
+          light: '#EF6482',
+          dark: '#D43759',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.16)',
@@ -193,9 +193,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-error-mainChannel) / 0.38)'
         },
         warning: {
-          main: '#FFAB00',
-          light: '#FFBC33',
-          dark: '#E69A00',
+          main: '#FFAB1D',
+          light: '#FFBC4A',
+          dark: '#E69A1A',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.16)',
@@ -204,9 +204,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-warning-mainChannel) / 0.38)'
         },
         info: {
-          main: '#03C3EC',
-          light: '#35CFF0',
-          dark: '#03AFD4',
+          main: '#2092EC',
+          light: '#4DA8F0',
+          dark: '#1D83D4',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.16)',
@@ -215,9 +215,9 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           darkerOpacity: 'rgb(var(--mui-palette-info-mainChannel) / 0.38)'
         },
         success: {
-          main: '#71DD37',
-          light: '#8DE45F',
-          dark: '#66C732',
+          main: '#10B981',
+          light: '#40C79A',
+          dark: '#0EA774',
           contrastText: '#FFF',
           lighterOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.08)',
           lightOpacity: 'rgb(var(--mui-palette-success-mainChannel) / 0.16)',
@@ -235,8 +235,8 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
         divider: `rgb(var(--mui-mainColorChannels-dark) / 0.12)`,
         dividerChannel: 'var(--mui-mainColorChannels-dark)',
         background: {
-          default: skin === 'bordered' ? '#2B2C40' : '#232333',
-          paper: '#2B2C40',
+          default: skin === 'bordered' ? '#343833' : '#2A2D29',
+          paper: '#343833',
           paperChannel: '43 44 64'
         },
         action: {
@@ -269,7 +269,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           successFilledBg: 'var(--mui-palette-success-main)'
         },
         Avatar: {
-          defaultBg: '#373B50'
+          defaultBg: '#414740'
         },
         Chip: {
           defaultBorder: 'var(--mui-palette-divider)'
@@ -280,7 +280,7 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           disabledBg: `var(--mui-palette-action-hover)`
         },
         SnackbarContent: {
-          bg: '#E6E6F1',
+          bg: '#EBEDEA',
           color: 'var(--mui-palette-background-paper)'
         },
         Switch: {
@@ -294,19 +294,19 @@ const colorSchemes = (skin: Skin): Theme['colorSchemes'] => {
           successDisabledColor: 'var(--mui-palette-common-white)'
         },
         Tooltip: {
-          bg: '#E6E6F1'
+          bg: '#EBEDEA'
         },
         TableCell: {
           border: 'var(--mui-palette-divider)'
         },
         customColors: {
-          bodyBg: '#232333',
-          chatBg: '#20202E',
-          greyLightBg: '#313246',
+          bodyBg: '#2A2D29',
+          chatBg: '#262925',
+          greyLightBg: '#3A3F38',
           inputBorder: `rgb(var(--mui-mainColorChannels-dark) / 0.22)`,
-          tableHeaderBg: '#2B2C40',
-          tooltipText: '#2B2C40',
-          trackBg: '#41415F'
+          tableHeaderBg: '#343833',
+          tooltipText: '#343833',
+          trackBg: '#4D544C'
         }
       }
     }

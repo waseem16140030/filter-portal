@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 // Next Imports
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
@@ -17,9 +16,6 @@ import { styled, useTheme } from '@mui/material/styles'
 // Third-party Imports
 import classnames from 'classnames'
 
-// Type Imports
-import type { Locale } from '@configs/i18n'
-
 // Component Imports
 import DirectionalIcon from '@components/DirectionalIcon'
 import Logo from '@components/layout/shared/Logo'
@@ -27,9 +23,6 @@ import CustomTextField from '@core/components/mui/TextField'
 
 // Hook Imports
 import { useSettings } from '@core/hooks/useSettings'
-
-// Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Styled Custom Components
 const ResetPasswordIllustration = styled('img')(({ theme }) => ({
@@ -52,7 +45,7 @@ const ResetPasswordV2 = () => {
   const [isConfirmPasswordShown, setIsConfirmPasswordShown] = useState(false)
 
   // Hooks
-  const { lang: locale } = useParams()
+
   const { settings } = useSettings()
   const theme = useTheme()
 
@@ -77,10 +70,7 @@ const ResetPasswordV2 = () => {
         />
       </div>
       <div className='flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]'>
-        <Link
-          href={getLocalizedUrl('/', locale as Locale)}
-          className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'
-        >
+        <Link href={'/'} className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'>
           <Logo />
         </Link>
         <div className='flex flex-col gap-6 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset] mbs-11 sm:mbs-14 md:mbs-0'>
@@ -132,11 +122,7 @@ const ResetPasswordV2 = () => {
               Set New Password
             </Button>
             <Typography className='flex justify-center items-center' color='primary.main'>
-              <Link
-                href={getLocalizedUrl('/pages/auth/login-v2', locale as Locale)}
-                onClick={e => e.preventDefault()}
-                className='flex items-center gap-1'
-              >
+              <Link href={'/pages/auth/login-v2'} onClick={e => e.preventDefault()} className='flex items-center gap-1'>
                 <DirectionalIcon ltrIconClass='bx-chevron-left' rtlIconClass='bx-chevron-right' />
                 <span>Back to Login</span>
               </Link>

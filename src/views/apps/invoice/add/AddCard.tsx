@@ -30,8 +30,6 @@ import CustomTextField from '@core/components/mui/TextField'
 import type { InvoiceType } from '@/types/apps/invoiceTypes'
 import type { FormDataType } from './AddCustomerDrawer'
 
-// Component Imports
-
 import AddCustomerDrawer, { initialFormData } from './AddCustomerDrawer'
 
 // Styled Component Imports

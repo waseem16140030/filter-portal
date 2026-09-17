@@ -2,7 +2,6 @@
 
 // Next Imports
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
@@ -12,16 +11,10 @@ import { styled, useTheme } from '@mui/material/styles'
 // Third-party Imports
 import classnames from 'classnames'
 
-// Type Imports
-import type { Locale } from '@configs/i18n'
-
 // Component Imports
 import DirectionalIcon from '@components/DirectionalIcon'
 import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'
-
-// Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Styled Custom Components
 const ForgotPasswordIllustration = styled('img')(({ theme }) => ({
@@ -40,7 +33,7 @@ const ForgotPasswordIllustration = styled('img')(({ theme }) => ({
 
 const ForgotPassword = () => {
   // Hooks
-  const { lang: locale } = useParams()
+
   const theme = useTheme()
 
   return (
@@ -54,7 +47,7 @@ const ForgotPassword = () => {
       </div>
       <div className='flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]'>
         <Link
-          href={getLocalizedUrl('/login', locale as Locale)}
+          href={'/login'}
           className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'
         >
           <Logo />
@@ -70,7 +63,7 @@ const ForgotPassword = () => {
               Send reset link
             </Button>
             <Typography className='flex justify-center items-center' color='primary.main'>
-              <Link href={getLocalizedUrl('/login', locale as Locale)} className='flex items-center gap-1.5'>
+              <Link href={'/login'} className='flex items-center gap-1.5'>
                 <DirectionalIcon ltrIconClass='bx-chevron-left' rtlIconClass='bx-chevron-right' className='text-xl' />
                 <span>Back to Login</span>
               </Link>

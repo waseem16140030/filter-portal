@@ -16,7 +16,7 @@ export const users: UserTable[] = [
     id: 1,
     name: 'John Doe',
     password: 'admin',
-    email: 'admin@sneat.com',
+    email: 'admin@filter-go.com',
     image: '/images/avatars/1.png'
   }
 ]

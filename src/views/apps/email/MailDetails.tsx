@@ -36,8 +36,6 @@ import type { Email } from '@/types/apps/emailTypes'
 // Slice Imports
 import { moveEmailsToFolder, navigateEmails, toggleLabel } from '@/redux-store/slices/email'
 
-// Components Imports
-
 import MailCard from './MailCard'
 
 // Styles Imports

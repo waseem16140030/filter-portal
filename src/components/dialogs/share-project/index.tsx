@@ -236,7 +236,7 @@ const ShareProject = ({ open, setOpen }: ShareProjectProps) => {
         <div className='flex items-center justify-between flex-wrap gap-4'>
           <div className='flex items-center grow gap-2'>
             <i className='bx-user text-xl' />
-            <Typography variant='h6'>{`Public to ${themeConfig.templateName} - ThemeSelection`}</Typography>
+            <Typography variant='h6'>{`Public to ${themeConfig.templateName}`}</Typography>
           </div>
           <Button variant='contained' className='flex' startIcon={<i className='bx-link' />}>
             Copy Project Link

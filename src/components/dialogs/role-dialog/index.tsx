@@ -21,8 +21,6 @@ import tableStyles from '@core/styles/table.module.css'
 
 import DialogCloseButton from '../DialogCloseButton'
 
-// Style Imports
-
 type RoleDialogProps = {
   open: boolean
   setOpen: (open: boolean) => void

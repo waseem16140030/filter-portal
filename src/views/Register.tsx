@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 // Next Imports
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
@@ -20,15 +19,9 @@ import { styled, useTheme } from '@mui/material/styles'
 // Third-Party Imports
 import classnames from 'classnames'
 
-// Type Imports
-import type { Locale } from '@configs/i18n'
-
 // Component Imports
 import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'
-
-// Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Styled Custom Components
 const RegisterIllustration = styled('img')(({ theme }) => ({
@@ -50,7 +43,7 @@ const Register = () => {
   const [isPasswordShown, setIsPasswordShown] = useState(false)
 
   // Hooks
-  const { lang: locale } = useParams()
+
   const theme = useTheme()
 
   const handleClickShowPassword = () => setIsPasswordShown(show => !show)
@@ -66,7 +59,7 @@ const Register = () => {
       </div>
       <div className='flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]'>
         <Link
-          href={getLocalizedUrl('/login', locale as Locale)}
+          href={'/login'}
           className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'
         >
           <Logo />
@@ -112,7 +105,7 @@ const Register = () => {
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
               <Typography>Already have an account?</Typography>
-              <Typography component={Link} href={getLocalizedUrl('/login', locale as Locale)} color='primary.main'>
+              <Typography component={Link} href={'/login'} color='primary.main'>
                 Sign in instead
               </Typography>
             </div>

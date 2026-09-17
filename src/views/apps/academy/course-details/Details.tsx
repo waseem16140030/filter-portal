@@ -21,8 +21,6 @@ import ReactPlayer from '@/libs/ReactPlayer'
 // Type Imports
 import type { CourseDetails } from '@/types/apps/academyTypes'
 
-// Components Imports
-
 const Details = ({ data }: { data?: CourseDetails }) => {
   // Hooks
   const theme = useTheme()

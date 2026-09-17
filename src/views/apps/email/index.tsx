@@ -26,10 +26,6 @@ import { filterEmails } from '@/redux-store/slices/email'
 import MailContent from './MailContent'
 import SidebarLeft from './SidebarLeft'
 
-// Hook Imports
-
-// Util Imports
-
 const EmailWrapper = ({ folder, label }: { folder?: string; label?: string }) => {
   // States
   const [sidebarOpen, setSidebarOpen] = useState(false)

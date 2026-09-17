@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 import type { MouseEvent } from 'react'
 
 // Next Imports
-import { useParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 // MUI Imports
 import { styled } from '@mui/material/styles'
@@ -19,20 +19,14 @@ import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 import MenuItem from '@mui/material/MenuItem'
 
-// Third-party Imports
-import { signOut, useSession } from 'next-auth/react'
-
-// Type Imports
-import type { Locale } from '@configs/i18n'
-
 // Component Imports
 import CustomAvatar from '@core/components/mui/Avatar'
 
+// Context Imports
+import { useSession } from '@/contexts/sessionContext'
+
 // Hook Imports
 import { useSettings } from '@core/hooks/useSettings'
-
-// Util Imports
-import { getLocalizedUrl } from '@/utils/i18n'
 
 // Styled component for badge content
 const BadgeContentSpan = styled('span')({
@@ -53,9 +47,8 @@ const UserDropdown = () => {
 
   // Hooks
   const router = useRouter()
-  const { data: session } = useSession()
+  const session = useSession()
   const { settings } = useSettings()
-  const { lang: locale } = useParams()
 
   const handleDropdownOpen = () => {
     !open ? setOpen(true) : setOpen(false)
@@ -63,7 +56,7 @@ const UserDropdown = () => {
 
   const handleDropdownClose = (event?: MouseEvent<HTMLLIElement> | (MouseEvent | TouchEvent), url?: string) => {
     if (url) {
-      router.push(getLocalizedUrl(url, locale as Locale))
+      router.push(url)
     }
 
     if (anchorRef.current && anchorRef.current.contains(event?.target as HTMLElement)) {
@@ -76,7 +69,10 @@ const UserDropdown = () => {
   const handleUserLogout = async () => {
     try {
       // Sign out from the app
-      await signOut({ callbackUrl: process.env.NEXT_PUBLIC_APP_URL })
+      await fetch(`${process.env.NEXT_PUBLIC_APP_URL ?? ''}/api/logout`, { method: 'POST' })
+
+      router.push('/login')
+      router.refresh()
     } catch (error) {
       console.error(error)
 
@@ -96,8 +92,8 @@ const UserDropdown = () => {
       >
         <CustomAvatar
           ref={anchorRef}
-          alt={session?.user?.name || ''}
-          src={session?.user?.image || ''}
+          alt={session?.name || ''}
+          src={session?.image || ''}
           onClick={handleDropdownOpen}
           className='cursor-pointer'
         />
@@ -121,11 +117,11 @@ const UserDropdown = () => {
               <ClickAwayListener onClickAway={e => handleDropdownClose(e as MouseEvent | TouchEvent)}>
                 <MenuList>
                   <div className='flex items-center plb-2 pli-5 gap-2' tabIndex={-1}>
-                    <CustomAvatar size={40} alt={session?.user?.name || ''} src={session?.user?.image || ''} />
+                    <CustomAvatar size={40} alt={session?.name || ''} src={session?.image || ''} />
                     <div className='flex items-start flex-col'>
-                      <Typography variant='h6'>{session?.user?.name || ''}</Typography>
+                      <Typography variant='h6'>{session?.name || ''}</Typography>
                       <Typography variant='body2' color='text.disabled'>
-                        {session?.user?.email || ''}
+                        {session?.email || ''}
                       </Typography>
                     </div>
                   </div>

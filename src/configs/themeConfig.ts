@@ -54,9 +54,9 @@ export type Config = {
 }
 
 const themeConfig: Config = {
-  templateName: 'sneat',
+  templateName: 'Breeze',
   homePageUrl: '/dashboards/crm',
-  settingsCookieName: 'sneat-mui-next-demo-1',
+  settingsCookieName: 'breeze-settings',
   mode: 'system', // 'system', 'light', 'dark'
   skin: 'default', // 'default', 'bordered'
   semiDark: false, // true, false

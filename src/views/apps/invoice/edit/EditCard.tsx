@@ -22,8 +22,6 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 // Third-party Imports
 import classnames from 'classnames'
 
-// Type Imports
-
 // Component Imports
 import Logo from '@components/layout/shared/Logo'
 import CustomTextField from '@core/components/mui/TextField'

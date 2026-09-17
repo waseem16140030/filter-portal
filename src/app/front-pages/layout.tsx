@@ -1,6 +1,5 @@
 // MUI Imports
 import Button from '@mui/material/Button'
-import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
@@ -27,9 +26,8 @@ import '@/app/globals.css'
 import '@assets/iconify-icons/generated-icons.css'
 
 export const metadata = {
-  title: 'Sneat - MUI Next.js Admin Dashboard Template',
-  description:
-    'Sneat - MUI Next.js Admin Dashboard Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
+  title: 'Breeze',
+  description: 'Breeze by FilterGO — schedule, dispatch and track air filter replacements. Fresh Air Delivered.'
 }
 
 const Layout = async ({ children }: ChildrenType) => {
@@ -37,28 +35,23 @@ const Layout = async ({ children }: ChildrenType) => {
   const systemMode = await getSystemMode()
 
   return (
-    <html id='__next' suppressHydrationWarning>
-      <body className='flex is-full min-bs-full flex-auto flex-col'>
-        <InitColorSchemeScript attribute='data' defaultMode={systemMode} />
-        <Providers direction='ltr'>
-          <BlankLayout systemMode={systemMode}>
-            <IntersectionProvider>
-              <FrontLayout>
-                {children}
-                <ScrollToTop className='mui-fixed'>
-                  <Button
-                    variant='contained'
-                    className='is-10 bs-10 rounded-full p-0 min-is-0 flex items-center justify-center'
-                  >
-                    <i className='bx-up-arrow-alt' />
-                  </Button>
-                </ScrollToTop>
-              </FrontLayout>
-            </IntersectionProvider>
-          </BlankLayout>
-        </Providers>
-      </body>
-    </html>
+    <Providers direction='ltr'>
+      <BlankLayout systemMode={systemMode}>
+        <IntersectionProvider>
+          <FrontLayout>
+            {children}
+            <ScrollToTop className='mui-fixed'>
+              <Button
+                variant='contained'
+                className='is-10 bs-10 rounded-full p-0 min-is-0 flex items-center justify-center'
+              >
+                <i className='bx-up-arrow-alt' />
+              </Button>
+            </ScrollToTop>
+          </FrontLayout>
+        </IntersectionProvider>
+      </BlankLayout>
+    </Providers>
   )
 }
 

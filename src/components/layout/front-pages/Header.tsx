@@ -72,7 +72,7 @@ const Header = ({ mode }: { mode: Mode }) => {
               <CustomIconButton
                 component={Link}
                 variant='contained'
-                href='https://themeselection.com/item/sneat-mui-nextjs-admin-template'
+                href='https://www.filter-go.com/'
                 color='primary'
                 target='_blank'
               >
@@ -82,7 +82,7 @@ const Header = ({ mode }: { mode: Mode }) => {
               <Button
                 component={Link}
                 variant='contained'
-                href='https://themeselection.com/item/sneat-mui-nextjs-admin-template'
+                href='https://www.filter-go.com/'
                 startIcon={<i className='bx-cart text-xl' />}
                 className='whitespace-nowrap'
                 target='_blank'
